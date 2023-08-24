@@ -12,8 +12,8 @@ import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import androidx.navigation.compose.navigation
 import androidx.navigation.compose.rememberNavController
+import com.giovanni.dotaapplication.commons.view.DotaScreen
 import com.giovanni.dotaapplication.commons.viewmodel.SampleViewModel
 import com.giovanni.dotaapplication.ui.theme.DotaApplicationTheme
 
@@ -25,7 +25,7 @@ class MainActivity : ComponentActivity() {
                 val navController = rememberNavController()
                 NavHost(
                     navController = navController,
-                    startDestination = "home"
+                    startDestination = DotaScreen.Home.name
                 ) {
 //                    navigation(
 //                        startDestination = "home",
@@ -37,7 +37,7 @@ class MainActivity : ComponentActivity() {
 //                            ProfileScreen()
 //                        }
 //                    }
-                    composable("home") {
+                    composable(DotaScreen.Home.name) {
                         val viewModel =
                             it.sharedViewModel<SampleViewModel>(navController = navController)
                         ProfileScreen()
