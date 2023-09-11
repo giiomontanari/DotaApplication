@@ -5,8 +5,9 @@ import com.giovanni.dotaapplication.domain.datasource.DotaDataSource
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
+import javax.inject.Inject
 
-class DotaDataSourceImpl : DotaDataSource {
+class DotaDataSourceImpl @Inject constructor() : DotaDataSource {
     @GET("/heroes?api_key={$queryKey}")
     override suspend fun getHeroes(): HeroesResponse {
         return Retrofit.Builder()

@@ -9,4 +9,5 @@ import javax.inject.Inject
 class HomeViewModel @Inject constructor(
     private val getHeroes: GetHeroes
 ) : ViewModel() {
+
 }
