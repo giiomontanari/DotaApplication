@@ -1,7 +1,7 @@
-package com.giovanni.dotaapplication.presentation.view
+package com.giovanni.dotaapplication
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
 
 @HiltAndroidApp
-class Myapp : Application() {}
+class Myapp : Application()
