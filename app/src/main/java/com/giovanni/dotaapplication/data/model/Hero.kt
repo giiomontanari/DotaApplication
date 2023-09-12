@@ -2,7 +2,7 @@ package com.giovanni.dotaapplication.data.model
 
 import com.google.gson.annotations.SerializedName
 
-data class Heroes(
+data class Hero(
     @SerializedName("id")
     val id: Int,
     @SerializedName("localized_name")
