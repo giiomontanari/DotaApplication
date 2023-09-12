@@ -13,9 +13,4 @@ class DotaDataSourceImpl @Inject constructor(
     override suspend fun getHeroes(): Response<List<Hero>> {
         return api.getHeroes(queryKey)
     }
-
-    companion object {
-
-        private const val queryKey: String = "8456cf76-b747-4a93-bf46-0952e2d947a1"
-    }
 }

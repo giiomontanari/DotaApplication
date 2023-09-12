@@ -12,5 +12,15 @@ data class Hero(
     @SerializedName("attack_type")
     val attack_type: String,
     @SerializedName("roles")
-    val roles: List<String>
+    val roles: List<String>,
+    @SerializedName("img")
+    val img: String,
+    @SerializedName("icon")
+    val icon: String,
+    @SerializedName("base_health")
+    val base_health: Int,
+    @SerializedName("base_health_regen")
+    val base_health_regen: Int,
+    @SerializedName("base_mana")
+    val base_mana: Int
 )
