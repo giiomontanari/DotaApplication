@@ -17,6 +17,8 @@ android {
         targetSdk = 33
         versionCode = 1
         versionName = "1.0"
+        buildFeatures.buildConfig = true
+        buildConfigField("String", "API_KEY", "\"${extra["dota_api_key"]}\"")
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {

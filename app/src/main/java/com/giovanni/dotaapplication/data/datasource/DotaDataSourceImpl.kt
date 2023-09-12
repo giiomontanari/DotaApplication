@@ -1,5 +1,6 @@
 package com.giovanni.dotaapplication.data.datasource
 
+import com.giovanni.dotaapplication.BuildConfig
 import com.giovanni.dotaapplication.data.api.DotaService
 import com.giovanni.dotaapplication.data.model.Hero
 import com.giovanni.dotaapplication.domain.datasource.DotaDataSource
@@ -11,6 +12,6 @@ class DotaDataSourceImpl @Inject constructor(
 ) : DotaDataSource {
 
     override suspend fun getHeroes(): Response<List<Hero>> {
-        return api.getHeroes(queryKey)
+        return api.getHeroes(BuildConfig.API_KEY)
     }
 }
