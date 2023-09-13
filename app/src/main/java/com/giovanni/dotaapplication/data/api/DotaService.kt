@@ -6,7 +6,7 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface DotaService {
-    @GET("heroes")
+    @GET("heroStats")
     suspend fun getHeroes(
         @Query(
             "api_key"

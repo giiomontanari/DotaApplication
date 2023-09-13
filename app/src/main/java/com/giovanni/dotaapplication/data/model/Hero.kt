@@ -5,6 +5,8 @@ import com.google.gson.annotations.SerializedName
 data class Hero(
     @SerializedName("id")
     val id: Int,
+    @SerializedName("name")
+    val name: String,
     @SerializedName("localized_name")
     val localized_name: String,
     @SerializedName("primary_attr")
@@ -20,7 +22,9 @@ data class Hero(
     @SerializedName("base_health")
     val base_health: Int,
     @SerializedName("base_health_regen")
-    val base_health_regen: Int,
+    val base_health_regen: Float,
     @SerializedName("base_mana")
-    val base_mana: Int
+    val base_mana: Int,
+    @SerializedName("base_mana_regen")
+    val base_mana_regen: Float
 )
