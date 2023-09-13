@@ -3,7 +3,6 @@ package com.giovanni.dotaapplication.presentation.view
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Scaffold
 import androidx.compose.material.TopAppBar
 import androidx.compose.material3.Text
@@ -34,7 +33,7 @@ fun HomeScreen(
             DotaTopbar()
         },
         content = {
-            print(it)
+            DotaContent(dotaState, it)
         }
     )
 }
@@ -52,9 +51,27 @@ fun DotaTopbar() {
         )
     }
 }
+
 @Composable
 fun onLoading() {
 
+}
+
+@Composable
+fun onError() {
+
+}
+
+@Composable
+fun DotaContent(
+    state: State<List<Hero>>,
+    paddingValues: PaddingValues
+) {
+    when (state) {
+        is State.Loading -> onLoading()
+        is State.Error -> onError()
+        is State.Success -> HeroList(heroes = state.data)
+    }
 }
 
 @Composable

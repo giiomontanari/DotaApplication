@@ -33,7 +33,6 @@ class HomeViewModel @Inject constructor(
         }.onStart {
             _dotaState.value = State.Loading
         }.catch {
-            print(it)
             _dotaState.value = State.Error
         }.collectLatest {
             _dotaState.value = State.Success(it)
