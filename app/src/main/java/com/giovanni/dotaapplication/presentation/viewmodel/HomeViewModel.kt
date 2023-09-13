@@ -23,6 +23,10 @@ class HomeViewModel @Inject constructor(
     private val _dotaState = MutableStateFlow<State<List<Hero>>>(State.Loading)
     val dotaState = _dotaState.asStateFlow()
 
+    init {
+        fetchHeroes()
+    }
+
     fun fetchHeroes() = viewModelScope.launch {
         flow {
             emit(getHeroes.invoke())

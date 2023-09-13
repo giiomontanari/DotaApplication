@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.ui.graphics.Color
+import com.giovanni.dotaapplication.ui.theme.DotaColor
 import com.giovanni.dotaapplication.ui.theme.DotaSystemUi
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -13,7 +14,7 @@ class DotaActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             DotaSystemUi(
-                statusBarColor = Color(0xFFFFFFFF),
+                statusBarColor = DotaColor,
                 navigationBarColor = Color(0xFFFFFFFF),
             )
             DotaApp()
